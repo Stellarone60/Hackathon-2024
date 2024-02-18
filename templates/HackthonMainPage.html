@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='planner.ico') }}">
         {% if session %}
         <title>{{session.userinfo.name}}'s Planner</title>
         {% else %}
@@ -9,6 +10,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='HackthonMainStyle.css') }}" />
     </head>
     <body>
+    <!--Runs for logged in users-->
         {% if session %}
         <div class = "inSession">
             <h1>Welcome {{session.userinfo.name}}!</h1>
