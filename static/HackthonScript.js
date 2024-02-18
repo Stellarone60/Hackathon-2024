@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
             ev.target.classList.toggle('checked');
             saveList(); // Save the list when an item is checked or unchecked
         }
+        if(ev.target.classList == 'checked')
+        {
+          alert("Amazing work!!!");
+        }
     }, false);
 });
 
