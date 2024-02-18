@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The Website</title>
+        {% if session %}
+        <title>{{session.userinfo.name}}'s Planner</title>
+        {% else %}
+        <title>Planner Login</title>
+        {% endif %}
         <link rel="stylesheet" href="{{ url_for('static', filename='HackthonMainStyle.css') }}" />
     </head>
     <body>
-        
-        <a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">Yo whats up</a>
-        <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
+        {% if session %}
+        <div class = "inSession">
+            <h1>Welcome {{session.userinfo.name}}!</h1>
+            <!-- <div><pre>{{pretty}}</pre></div>-->
+            <a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">Yo whats up</a>
+            <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
+        </div>
+        {% else %}
+        <div class = "outSession">
+            <h1 id="profileDropDown">Please Login</h1>
+            <p><a href="/login" id="qsLoginBtn">Login</a></p>
+        </div>
+        {% endif %}
     </body>
 </html>
