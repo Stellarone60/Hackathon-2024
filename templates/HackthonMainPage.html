@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='planner.ico') }}">
+        <script src="{{ url_for('static', filename='game.js') }}"></script>
         {% if session %}
         <title>{{session.userinfo.name}}'s Planner</title>
         {% else %}
@@ -28,6 +29,7 @@
         </div>
         {% endif %}
     <!--Always runs regardless of users-->
+    <!--Followed this tutorial to create the bubbles https://www.youtube.com/watch?v=W6ZyGu6jXks-->
     <div class = "objects">
         <ul class = "box">
             <li></li>
