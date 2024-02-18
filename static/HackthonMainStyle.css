@@ -8,19 +8,9 @@ html
 }
 #testLine
 {
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.25s;
     text-decoration: none;
-    color: #333;
-    cursor:default;
-}
-#testLine:hover
-{
-    font-size:xx-large;
-    transition: 0.25s;
+    color: #ffffff;
+    cursor:text;
 }
 #qsLoginBtn
 {
@@ -253,10 +243,11 @@ body {
   
   /* Style the header */
   .header {
-    background-color: #f44336;
+    background: linear-gradient(0.25turn, purple, pink, purple);
     padding: 30px 40px;
     color: white;
     text-align: center;
+    border: 2px solid black;
   }
   
   /* Clear floats after the header */

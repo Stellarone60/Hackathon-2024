@@ -15,13 +15,13 @@
     <!--Runs for logged in users-->
         {% if session %}
         <div class = "inSession">
-            <h1 id="profileLoggedIn">Welcome {{session.userinfo.name}}!</h1>
+            <h1 id="profileLoggedIn" id="user">Welcome {{session.userinfo.name}}!</h1>
             <!-- <div><pre>{{pretty}}</pre></div>-->
             <!--<a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">Yo whats up</a>-->
             <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
 
             <div id="myDIV" class="header">
-                <h2 style="margin:5px">My To Do List</h2>
+                <h2 style="margin:5px">My H<a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">andy</a> Planner</h2>
                 <input type="text" id="myInput" placeholder="Enter Item...">
                 <span onclick="newElement()" class="addBtn">Add</span>
               </div>
