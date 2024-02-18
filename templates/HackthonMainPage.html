@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='planner.ico') }}">
-        <script src="{{ url_for('static', filename='HackathonScript.js') }}"></script>
+        <script src="{{ url_for('static', filename='HackthonScript.js') }}"></script>
         {% if session %}
         <title>{{session.userinfo.name}}'s Planner</title>
         {% else %}
@@ -17,26 +17,18 @@
         <div class = "inSession">
             <h1 id="profileLoggedIn">Welcome {{session.userinfo.name}}!</h1>
             <!-- <div><pre>{{pretty}}</pre></div>-->
-            <a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">Yo whats up</a>
+            <!--<a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">Yo whats up</a>-->
             <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
-
-
 
             <div id="myDIV" class="header">
                 <h2 style="margin:5px">My To Do List</h2>
-                <input type="text" id="myInput" placeholder="Title...">
+                <input type="text" id="myInput" placeholder="Enter Item...">
                 <span onclick="newElement()" class="addBtn">Add</span>
               </div>
               
               <ul id="myUL">
-                <li>Hit the gym</li>
-                <li class="checked">Pay bills</li>
-                <li>Meet George</li>
-                <li>Buy eggs</li>
-                <li>Read a book</li>
-                <li>Organize office</li>
+
               </ul>
-              
 
         </div>
     <!--Runs for not logged in users-->

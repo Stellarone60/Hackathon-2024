@@ -2,10 +2,9 @@ html
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
-    background: linear-gradient(0.25turn, #8cc8ad, #e18691, #8cc8ad);
+    background: linear-gradient(0.25turn, rgb(97, 97, 237), #e18691, rgb(97, 97, 237));
     height:auto;
     max-width: 100%;
-    overflow: hidden;
 }
 #testLine
 {
@@ -175,9 +174,6 @@ html
         opacity: 0;
     }
 }
-
-
-
 body {
     margin: 0;
     min-width: 250px;
@@ -210,10 +206,9 @@ body {
     -ms-user-select: none;
     user-select: none;
   }
-
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
     background: #f9f9f9;
   }
   
@@ -252,8 +247,8 @@ ul li:nth-child(odd) {
   }
   
   .close:hover {
-    background-color: #ccccff;/*This is the color of when the x is hovered over*/
-    color: white;/*color of the x when it is hovered over*/
+    background-color: #f44336;
+    color: white;
   }
   
   /* Style the header */
@@ -280,6 +275,7 @@ ul li:nth-child(odd) {
     padding: 10px;
     float: left;
     font-size: 16px;
+    z-index: 5;
   }
   
   /* Style the "Add" button */
@@ -294,8 +290,10 @@ ul li:nth-child(odd) {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
+    z-index: 5;
   }
   
   .addBtn:hover {
     background-color: #bbb;
+    z-index: 5;
   }
