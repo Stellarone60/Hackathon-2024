@@ -1,0 +1,28 @@
+html
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    background-image: url("https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg");
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height:auto;
+    max-width: 100%;
+}
+#testLine
+{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s;
+    text-decoration: none;
+    color: #333;
+    cursor:default;
+}
+#testLine:hover
+{
+    font-size:xx-large;
+    transition: 0.25s;
+}
