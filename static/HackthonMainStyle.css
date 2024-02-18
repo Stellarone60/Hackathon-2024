@@ -1,6 +1,6 @@
 html
 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
     background-image: url("https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg") !important;
     background-color: #333;
@@ -25,4 +25,44 @@ html
 {
     font-size:xx-large;
     transition: 0.25s;
+}
+#qsLoginBtn
+{
+    position: absolute; 
+    font-size: 8vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    transition: 0.25s;
+    color: #ffffff;
+    border: 3.5px solid darkolivegreen;
+    border-radius: 100vh;
+    background-color: green;
+    padding: 2vh;
+}
+#profileDropDown
+{
+    position: absolute; 
+    top: calc(50% - 2.25em);
+    font-size: 13vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s;
+    text-decoration: underline;
+}
+#loginBox
+{
+    background-color: lightgrey;
+    width: 50vw;
+    border: 2.5vh solid black;
+    height: 50vh;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    opacity: 50%;
 }

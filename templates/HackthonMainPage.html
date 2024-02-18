@@ -16,10 +16,12 @@
             <a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">Yo whats up</a>
             <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
         </div>
+    <!--Runs for not logged in users-->
         {% else %}
         <div class = "outSession">
             <h1 id="profileDropDown">Please Login</h1>
-            <p><a href="/login" id="qsLoginBtn">Login</a></p>
+            <p><a href="/login" id="qsLoginBtn" >Login/Signup</a></p>
+            <div id="loginBox"></div>
         </div>
         {% endif %}
     </body>
