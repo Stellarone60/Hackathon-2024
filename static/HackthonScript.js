@@ -1,18 +1,17 @@
-// Retrieve saved list items from localStorage on page load
 document.addEventListener('DOMContentLoaded', function() {
   try {
     var savedList = localStorage.getItem('myToDoList');
   
     if (savedList) {
       document.getElementById('myUL').innerHTML = savedList;
-      addCloseButtonListeners(); // Re-attach event listeners to close buttons
+      addCloseButtonListeners();
     }
   } catch (error) {
     console.error('Error retrieving list from localStorage:', error);
   }
 });
 
-// Save the list to localStorage
+// Saving the list function
 function saveList() {
   try {
     var listHTML = document.getElementById('myUL').innerHTML;
@@ -22,19 +21,18 @@ function saveList() {
   }
 }
 
-// Attach close button listeners to dynamically added close buttons
 function addCloseButtonListeners() {
   var close = document.getElementsByClassName("close");
   for (var i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-      saveList(); // Save the list after an item is removed
+      saveList(); // List saved after item removed
     }
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
+//Checkmark
 document.addEventListener("DOMContentLoaded", function() {
     var list = document.querySelector('ul');
     list.addEventListener('click', function(ev) {
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }, false);
 });
 
-// Create a new list item when clicking on the "Add" button
+// Creates new item in the list when user presses "add"
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
@@ -69,5 +67,5 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-  addCloseButtonListeners(); // Re-attach event listeners to close buttons
+  addCloseButtonListeners();
 }
