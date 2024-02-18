@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='planner.ico') }}">
         {% if session %}
         <title>{{session.userinfo.name}}'s Planner</title>
@@ -13,7 +14,7 @@
     <!--Runs for logged in users-->
         {% if session %}
         <div class = "inSession">
-            <h1>Welcome {{session.userinfo.name}}!</h1>
+            <h1 id="profileLoggedIn">Welcome {{session.userinfo.name}}!</h1>
             <!-- <div><pre>{{pretty}}</pre></div>-->
             <a href ="https://www.linkedin.com/in/andrew-o-fallon-631281a1/" target="_blank" id = "testLine">Yo whats up</a>
             <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
@@ -26,5 +27,16 @@
             <div id="loginBox"></div>
         </div>
         {% endif %}
+    <!--Always runs regardless of users-->
+    <div class = "objects">
+        <ul class = "box">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
     </body>
 </html>

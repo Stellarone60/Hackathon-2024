@@ -2,13 +2,10 @@ html
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
-    background-image: url("https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg") !important;
-    background-color: #333;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background: linear-gradient(0.25turn, #8cc8ad, #e18691, #8cc8ad);
     height:auto;
     max-width: 100%;
+    overflow: hidden;
 }
 #testLine
 {
@@ -34,12 +31,35 @@ html
     left: 50%;
     transform: translate(-50%, -50%);
     text-decoration: none;
-    transition: 0.25s;
+    transition: 0.1s;
     color: #ffffff;
     border: 3.5px solid darkolivegreen;
     border-radius: 100vh;
     background-color: green;
     padding: 2vh;
+}
+#qsLogoutBtn
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.1s;
+}
+#qsLogoutBtn:hover
+{
+    background-color: lightcoral;
+    transition: 0.1s;
+}
+#qsLoginBtn:hover
+{
+    background-color: rgb(0, 188, 0);
+    transition: 0.1s;
 }
 #profileDropDown
 {
@@ -49,6 +69,10 @@ html
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.25s;
+    text-decoration: underline;
+}
+#profileLoggedIn
+{
     text-decoration: underline;
 }
 #loginBox
@@ -65,4 +89,89 @@ html
     padding: 0;
     margin: 0;
     opacity: 50%;
+}
+.objects
+{
+    width: 100%;
+    height: 100vh;
+    z-index: -98;
+}
+.box
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -98;
+}
+.box li
+{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+    border-radius: 50%;
+
+}
+.box li:nth-child(1)
+{
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.box li:nth-child(2)
+{
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+.box li:nth-child(3)
+{
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+.box li:nth-child(4)
+{
+    left: 45%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+.box li:nth-child(5)
+{
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+.box li:nth-child(6)
+{
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-800px) scale(2);
+        opacity: 0;
+    }
 }
