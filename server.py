@@ -34,7 +34,7 @@ oauth.register(
 @app.route("/")
 def home():
     return render_template(
-        "home.html",
+        "HackthonMainPage.html",
         session=session.get("user"),
         pretty=json.dumps(session.get("user"), indent=4),
     )
@@ -52,10 +52,6 @@ def login():
     return oauth.auth0.authorize_redirect(
         redirect_uri=url_for("callback", _external=True)
     )
-
-@app.route("/HackthonMainPage.html")
-def mainpage():
-    return(render_template("HackthonMainPage.html"))
 
 @app.route("/logout")
 def logout():

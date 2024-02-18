@@ -2,7 +2,7 @@ html
 {
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
-    background-image: url("https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg");
+    background-image: url("https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg") !important;
     background-color: #333;
     background-repeat: no-repeat;
     background-attachment: fixed;
