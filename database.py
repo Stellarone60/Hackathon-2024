@@ -1,9 +1,9 @@
 import redis
 
 # Replace the placeholder values with your actual Redis Cloud database information
-redis_host = "redis-15558.c53.west-us.azure.cloud.redislabs.com"
+redis_host = "localhost"
 redis_port = 15558  # Default Redis port
-redis_password = "8p4QwHv9yZ5FmRxDelkKm26HSRSc1pQZ"
+#redis_password = "8p4QwHv9yZ5FmRxDelkKm26HSRSc1pQZ"
 redis_db = 0  # Default Redis database index
 
 # Create a connection to the Redis Cloud database
@@ -11,7 +11,7 @@ try:
     redis_connection = redis.StrictRedis(
         host=redis_host,
         port=redis_port,
-        password=redis_password,
+        #password=redis_password,
         db=redis_db,
         decode_responses=True,  # Decode responses from bytes to strings
         socket_timeout=5
