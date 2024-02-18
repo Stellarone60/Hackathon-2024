@@ -210,7 +210,7 @@ body {
   /* When clicked on, add a background color and strike out text */
   ul li.checked {
     background: #888;
-    color: #fff;
+    color: #ffffff;
     text-decoration: line-through;
   }
   
@@ -218,7 +218,7 @@ body {
   ul li.checked::before {
     content: '';
     position: absolute;
-    border-color: #fff;
+    border-color: #ffffff;
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;

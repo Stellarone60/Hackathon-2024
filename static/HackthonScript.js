@@ -53,6 +53,12 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
   addCloseButtonListeners(); // Attach event listener to the new close button
   saveList(); // Save the updated list
 }
